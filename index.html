@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: rebeccapurple;
+        }
+
+        img[data-hidden] {
+            display: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div style="min-height: 100vh">
+        <div style="display: grid; grid-template-columns: repeat(3,minmax(0,1fr));">
+            <div style="display: flex; flex-direction: column">
+                <div style="overflow: hidden; width: 100%">
+                    <horizontal-scroller id="foo">
+                        <li id="foo-1">
+                            <div style="width: 100vw">
+                                <picture>
+                                    <img width="1920" height="1080" src="/src/image.png" />
+                                </picture>
+                            </div>
+                        </li>
+                        <li id="foo-2">
+                            <div style="width: 100vw">
+                                <picture>
+                                    <img data-hidden width="1920" height="1080" src="/src/image.png" style="filter: invert(1)" />
+                                </picture>
+                            </div>
+                        </li>
+                    </horizontal-scroller>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import Index from "/src/HorizontalScroller.ts";
+
+        window.customElements.define('horizontal-scroller', HorizontalScroller);
+    </script>
+</body>
+</html>
