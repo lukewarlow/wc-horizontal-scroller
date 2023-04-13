@@ -1,0 +1,33 @@
+<div>
+  <link rel="stylesheet" href="/src/style.css">
+  <div class="relative">
+    <div class="absolute right-0 self-center text-white opacity-50 group-hover:opacity-100 bg-black bg-opacity-25 hover:bg-opacity-50 hidden z-10">
+      <button class="hidden lg:block exit-fullscreen-button">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </svg>
+      </button>
+    </div>
+    <div class="relative flex">
+      <div class="absolute self-center text-white bg-black bg-opacity-25 hover:bg-opacity-50 hidden z-10">
+        <a aria-label="Previous Image" class="previous-image-link" href="#">
+          <svg class="w-12 h-12 pointer-events-none" fill="none" stroke="currentColor"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
+        </a>
+      </div>
+      <ul class="snap-mandatory snap-x scrollbar-none flex flex-1 w-full motion-safe:scroll-smooth overflow-x-auto contents-container"></ul>
+      <div class="absolute right-0 self-center text-white bg-black bg-opacity-25 hover:bg-opacity-50 hidden z-10">
+        <a aria-label="Next Image" class="next-image-link z-10" href="#">
+          <svg class="w-12 h-12 pointer-events-none" fill="none" stroke="currentColor"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="fixed inset-0 backdrop-brightness-50 z-5 hidden fullscreen-background"></div>
+</div>

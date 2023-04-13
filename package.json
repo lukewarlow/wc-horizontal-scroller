@@ -1,0 +1,32 @@
+{
+  "name": "wc-horizontal-scroller",
+  "version": "0.0.1",
+  "type": "module",
+  "side-effects": false,
+  "files": ["dist"],
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc --declaration --emitDeclarationOnly --outDir dist"
+  },
+  "author": "Luke Warlow",
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "typescript": "5.0.4",
+    "vite": "^4.2.1"
+  }
+}
