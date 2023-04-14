@@ -1,5 +1,4 @@
 import css from './style.css?inline';
-import * as crypto from "crypto";
 
 const template = document.createElement('template');
 template.innerHTML = `
@@ -163,9 +162,11 @@ export default class HorizontalScroller extends HTMLElement {
 		background.onclick = this.#exitFullscreen;
 		exitFullscreenButton.onclick = this.#exitFullscreen;
 
+		const noFullscreen = this.hasAttribute('no-fullscreen') || this.getAttribute('no-fullscreen') === 'true';
+
 		this.onclick = (event) => {
 			event.stopPropagation();
-			if (window.matchMedia('(min-width: 1024px)').matches && (!this.hasAttribute('can-fullscreen') || this.getAttribute('can-fullscreen') === 'true')) {
+			if (window.matchMedia('(min-width: 1024px)').matches && !noFullscreen) {
 				exitFullscreenButton.parentElement!.classList.add('sm:block');
 				exitFullscreenButton.parentElement!.parentElement!.classList.remove('relative');
 				exitFullscreenButton.parentElement!.parentElement!.classList.add('fixed', 'z-10', 'start-0', 'end-0', 'block-start-0', 'block-end-0', 'm-auto', 'max-w-[80%]', 'h-fit', 'w-fit');
@@ -188,7 +189,7 @@ export default class HorizontalScroller extends HTMLElement {
 			}
 		};
 
-		if ((!this.hasAttribute('can-fullscreen') || this.getAttribute('can-fullscreen') === 'true')) {
+		if (!noFullscreen) {
 			this.#contents.firstElementChild!.classList.add('lg:cursor-pointer');
 		}
 
