@@ -62,13 +62,11 @@ export default class HorizontalScroller extends HTMLElement {
 		const background = this.#contents.querySelector('.fullscreen-background')! as HTMLElement;
 		const exitFullscreenButton = this.#contents.querySelector('.exit-fullscreen-button')! as HTMLButtonElement;
 
-		background.classList.remove('hidden');
 		background.classList.add('hidden');
 		exitFullscreenButton.parentElement!.classList.remove('sm:block');
 		exitFullscreenButton.parentElement!.parentElement!.classList.add('relative');
 		exitFullscreenButton.parentElement!.parentElement!.classList.remove('fixed', 'z-10', 'start-0', 'end-0', 'block-start-0', 'block-end-0', 'm-auto', 'max-w-[80%]', 'h-fit', 'w-fit');
 
-		this.#contents.firstElementChild!.classList.remove('lg:cursor-pointer');
 		this.#contents.firstElementChild!.classList.add('lg:cursor-pointer');
 		document.body.style.overflowY = 'visible';
 	};
@@ -105,21 +103,18 @@ export default class HorizontalScroller extends HTMLElement {
 		}
 
 		if (this.#activeSlideIndex > 0) {
-			previousLinkContainer.classList.remove('sm:block');
 			previousLinkContainer.classList.add('sm:block');
 			previousLink.href = `#${this.id}-${this.#activeSlideIndex}`;
 		}
 
 		if (this.#activeSlideIndex < this.#numberOfChildren - 1) {
-			nextLinkContainer.classList.remove('sm:block');
 			nextLinkContainer.classList.add('sm:block');
 			nextLink.href = `#${this.id}-${this.#activeSlideIndex + 2}`;
 		}
 	}
 
 	connectedCallback() {
-		this.#contents.firstElementChild!.classList.add('group');
-		this.#contents.firstElementChild!.classList.add('block');
+		this.#contents.firstElementChild!.classList.add('group', 'block');
 
 		// @ts-ignore
 		this.#numberOfChildren = Array.from(this.children).filter((el: HTMLElement) => getComputedStyle(el).display !== 'none').length;
@@ -164,13 +159,11 @@ export default class HorizontalScroller extends HTMLElement {
 		this.onclick = (event) => {
 			event.stopPropagation();
 			if (window.matchMedia('(min-width: 1024px)').matches && (!this.hasAttribute('can-fullscreen') || this.getAttribute('can-fullscreen') === 'true')) {
-				exitFullscreenButton.parentElement!.classList.remove('sm:block');
 				exitFullscreenButton.parentElement!.classList.add('sm:block');
 				exitFullscreenButton.parentElement!.parentElement!.classList.remove('relative');
 				exitFullscreenButton.parentElement!.parentElement!.classList.add('fixed', 'z-10', 'start-0', 'end-0', 'block-start-0', 'block-end-0', 'm-auto', 'max-w-[80%]', 'h-fit', 'w-fit');
 
 				background.classList.remove('hidden');
-
 
 				this.#contents.firstElementChild!.classList.remove('lg:cursor-pointer');
 				document.body.style.overflowY = 'hidden';
