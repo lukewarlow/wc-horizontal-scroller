@@ -1,4 +1,5 @@
 import css from './style.css?inline';
+import * as crypto from "crypto";
 
 const template = document.createElement('template');
 template.innerHTML = `
@@ -116,9 +117,14 @@ export default class HorizontalScroller extends HTMLElement {
 
 	connectedCallback() {
 		this.#contents.firstElementChild!.classList.add('group', 'block');
-
 		// @ts-ignore
-		this.#numberOfChildren = Array.from(this.children).filter((el: HTMLElement) => getComputedStyle(el).display !== 'none').length;
+		const children = Array.from(this.children).filter((el: HTMLElement) => getComputedStyle(el).display !== 'none');
+
+		children.forEach((child, index) => {
+			child.id = `${this.id}-${index + 1}`;
+		});
+
+		this.#numberOfChildren = children.length;
 
 		const contentsContainer = this.#contents.querySelector('.contents-container')!;
 
