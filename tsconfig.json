@@ -13,7 +13,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "lib": [
-      "es2020",
+      "es2022",
       "dom",
       "dom.iterable",
       "scripthost",

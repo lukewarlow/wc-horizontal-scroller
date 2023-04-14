@@ -1,6 +1,23 @@
 {
   "name": "wc-horizontal-scroller",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "description": "Web component for a horizontal scroller",
+  "keywords": [
+    "web",
+    "component",
+    "front-end",
+    "web-components",
+    "web-component",
+    "webcomponents",
+    "webcomponent",
+    "web components",
+    "web component",
+    "carousel",
+    "scroller",
+    "horizontal-scroller",
+    "horizontal scroller",
+    "TypeScript"
+  ],
   "type": "module",
   "side-effects": false,
   "files": ["dist"],
@@ -17,6 +34,7 @@
     "dev": "vite",
     "build": "vite build && tsc --declaration --emitDeclarationOnly --outDir dist"
   },
+  "repository": "https://github.com/lukewarlow/wc-horizontal-scroller.git",
   "author": "Luke Warlow",
   "license": "MIT",
   "dependencies": {
