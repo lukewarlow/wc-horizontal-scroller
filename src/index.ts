@@ -43,8 +43,6 @@ export default class HorizontalScroller extends HTMLElement {
 	#activeSlideIndex: number = 0;
 	#numberOfChildren: number = 0;
 
-	#closeWatcher: any = null;
-
 	constructor() {
 		super();
 
@@ -56,7 +54,6 @@ export default class HorizontalScroller extends HTMLElement {
 
 	#exitFullscreen = (event: Event) => {
 		event.stopPropagation();
-		this.#closeWatcher?.destroy();
 
 		const background = this.#contents.querySelector('.fullscreen-background')! as HTMLElement;
 		const exitFullscreenButton = this.#contents.querySelector('.exit-fullscreen-button')! as HTMLButtonElement;
@@ -181,15 +178,7 @@ export default class HorizontalScroller extends HTMLElement {
 				this.dispatchEvent(new CustomEvent('scrollerfullscreenenter', { bubbles: true, composed: true }));
 			}
 
-			if ('#closeWatcher' in window) {
-				// @ts-ignore
-				this.#closeWatcher = new CloseWatcher();
-				this.#closeWatcher.onclose = (e: CloseEvent) => {
-					this.#exitFullscreen(e);
-				}
-			} else {
-				document.addEventListener('keydown', this.#handleKeyPress);
-			}
+			document.addEventListener('keydown', this.#handleKeyPress);
 		};
 
 		if (!noFullscreen) {
