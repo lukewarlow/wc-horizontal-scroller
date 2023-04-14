@@ -14,7 +14,7 @@ $ npm i wc-horizontal-scroller
 Firstly, you need to register the custom element.
 
 ```js
-import HorizontalScroller from "/src/index.ts";
+import HorizontalScroller from "wc-horizontal-scroller";
 
 window.customElements.define('horizontal-scroller', HorizontalScroller);
 ```
