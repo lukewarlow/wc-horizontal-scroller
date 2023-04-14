@@ -23,8 +23,8 @@ Then you can use it in your HTML. You must provide an ID for the element.
 
 ```html
 <horizontal-scroller id="foo">
-    <li>Item 1</li>
-    <li>Item 2</li>
+    <div>Item 1</div>
+    <div>Item 2</div>
 </horizontal-scroller>
 ```
 

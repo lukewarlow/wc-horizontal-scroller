@@ -3,23 +3,10 @@
 @tailwind utilities;
 
 ::slotted(li) {
-    margin-right: 1.25rem;
     display: flex;
     width: 100%;
     scroll-snap-align: start;
     scroll-snap-stop: always;
-}
-
-/*ul > li {*/
-/*    margin-right: 1.25rem;*/
-/*    display: flex;*/
-/*    width: 100%;*/
-/*    scroll-snap-align: start;*/
-/*    scroll-snap-stop: always;*/
-/*}*/
-
-img[data-hidden] {
-    display: none;
 }
 
 .block-start-0 {

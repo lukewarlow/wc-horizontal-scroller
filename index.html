@@ -20,25 +20,18 @@
     </style>
 </head>
 <body>
-    <div style="min-height: 100vh">
+    <div>
         <div style="display: grid; grid-template-columns: repeat(3,minmax(0,1fr));">
             <div style="display: flex; flex-direction: column">
                 <div style="overflow: hidden; width: 100%">
                     <horizontal-scroller id="foo">
-                        <li>
-                            <div style="width: 100vw">
-                                <picture>
-                                    <img width="1920" height="1080" src="/src/image.png" />
-                                </picture>
-                            </div>
-                        </li>
-                        <li>
-                            <div style="width: 100vw">
-                                <picture>
-                                    <img data-hidden width="1920" height="1080" src="/src/image.png" style="filter: invert(1)" />
-                                </picture>
-                            </div>
-                        </li>
+                        <picture>
+                            <img width="1920" height="1080" src="/src/image.png" />
+                        </picture>
+
+                        <picture>
+                            <img data-hidden width="1920" height="1080" src="/src/image.png" style="filter: invert(1)" />
+                        </picture>
                     </horizontal-scroller>
                 </div>
             </div>
