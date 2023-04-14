@@ -1,4 +1,4 @@
-const plugin = require('tailwindcss/plugin');
+const { scrollbarWidth } = require('tailwind-scrollbar-utilities');
 
 module.exports = {
 	content: [
@@ -8,23 +8,6 @@ module.exports = {
 		preflight: true,
 	},
 	plugins: [
-		plugin(function({ addUtilities }) {
-			addUtilities([
-				{
-					'.scrollbar-auto': {
-						'scrollbar-width': 'auto',
-					},
-					'.scrollbar-none': {
-						'scrollbar-width': 'none',
-						'&::-webkit-scrollbar': {
-							'display': 'none'
-						}
-					},
-					'.scrollbar-thin': {
-						'scrollbar-width': 'thin'
-					},
-				}
-			])
-		}),
+		scrollbarWidth()
 	]
 };
