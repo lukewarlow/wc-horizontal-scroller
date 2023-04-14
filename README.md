@@ -1,4 +1,4 @@
-# Navigation API Types
+# Horizontal Scroller Web Component
 
 [![npm](https://img.shields.io/npm/v/wc-horizontal-scroller.svg?style=flat-square)](https://www.npmjs.com/package/wc-horizontal-scroller)
 
@@ -14,7 +14,7 @@ $ npm i wc-horizontal-scroller
 Firstly, you need to register the custom element.
 
 ```js
-import HorizontalScroller from "/src/index.ts";
+import HorizontalScroller from "wc-horizontal-scroller";
 
 window.customElements.define('horizontal-scroller', HorizontalScroller);
 ```
