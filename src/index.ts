@@ -68,7 +68,8 @@ export default class HorizontalScroller extends HTMLElement {
 		exitFullscreenButton.parentElement!.parentElement!.classList.remove('fixed', 'z-10', 'start-0', 'end-0', 'block-start-0', 'block-end-0', 'm-auto', 'max-w-[80%]', 'h-fit', 'w-fit');
 
 		this.#contents.firstElementChild!.classList.add('lg:cursor-pointer');
-		document.body.style.overflowY = 'visible';
+
+		this.dispatchEvent(new CustomEvent('scrollerfullscreenexit', { bubbles: true, composed: true }));
 	};
 
 	#scrollToTarget = (target: string) => {
@@ -166,7 +167,8 @@ export default class HorizontalScroller extends HTMLElement {
 				background.classList.remove('hidden');
 
 				this.#contents.firstElementChild!.classList.remove('lg:cursor-pointer');
-				document.body.style.overflowY = 'hidden';
+
+				this.dispatchEvent(new CustomEvent('scrollerfullscreenenter', { bubbles: true, composed: true }));
 			}
 
 			if ('#closeWatcher' in window) {
@@ -194,5 +196,11 @@ export default class HorizontalScroller extends HTMLElement {
 		document.removeEventListener('keydown', this.#handleKeyPress);
 		this.#contents.querySelector('.contents-container')!.removeEventListener('scroll', this.#scrollendHandler);
 		this.#contents.querySelector('.contents-container')!.removeEventListener('scrollend', this.#scrollendHandler);
+	}
+}
+
+declare global {
+	interface HTMLElementTagNameMap {
+		'horizontal-scroller': HorizontalScroller;
 	}
 }
