@@ -36,4 +36,4 @@ A `scrollerfullscreenenter` event will be dispatched by the element when enterin
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/lukewarlow/navigation-api-types/blob/master/LICENSE).
+This project is licensed under the [MIT License](https://github.com/lukewarlow/wc-horizontal-scroller/blob/master/LICENSE).
