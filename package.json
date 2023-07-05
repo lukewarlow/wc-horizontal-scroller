@@ -1,6 +1,6 @@
 {
   "name": "wc-horizontal-scroller",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Web component for a horizontal scroller",
   "keywords": [
     "web",
@@ -20,7 +20,9 @@
   ],
   "type": "module",
   "side-effects": false,
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -47,9 +49,10 @@
     "@types/node": "^18.15.11",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
-    "typescript": "5.0.4",
-    "vite": "^4.2.1",
+    "tailwind-mq": "^0.1.1",
     "tailwind-scrollbar-utilities": "^0.2.0",
-    "tailwindcss": "^3.3.1"
+    "tailwindcss": "^3.3.2",
+    "typescript": "5.0.4",
+    "vite": "^4.3.9"
   }
 }

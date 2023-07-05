@@ -1,4 +1,5 @@
 const { scrollbarWidth } = require('tailwind-scrollbar-utilities');
+const { mediaQueries } = require('tailwind-mq');
 
 module.exports = {
 	content: [
@@ -8,6 +9,7 @@ module.exports = {
 		preflight: true,
 	},
 	plugins: [
-		scrollbarWidth()
+		scrollbarWidth(),
+		mediaQueries(),
 	]
 };

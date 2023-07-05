@@ -5,7 +5,7 @@ template.innerHTML = `
 <div>
   <style>${css}</style>
   <div class="relative">
-    <div class="absolute right-0 self-center text-white opacity-50 group-hover:opacity-100 bg-black bg-opacity-25 hover:bg-opacity-50 hidden z-10">
+    <div class="absolute right-0 self-center text-white bg-black bg-opacity-25 hover:bg-opacity-50 transparency-reduce:bg-opacity-80 transparency-reduce:hover:bg-opacity-100 hidden z-10">
       <button class="hidden lg:block exit-fullscreen-button">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
              xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +14,7 @@ template.innerHTML = `
       </button>
     </div>
     <div class="relative flex">
-      <div class="absolute self-center text-white bg-black bg-opacity-25 hover:bg-opacity-50 hidden z-10">
+      <div class="absolute self-center text-white bg-black bg-opacity-25 hover:bg-opacity-50 transparency-reduce:bg-opacity-80 transparency-reduce:hover:bg-opacity-100 hidden z-10">
         <a aria-label="Previous Image" class="previous-image-link" href="#">
           <svg class="w-12 h-12 pointer-events-none" fill="none" stroke="currentColor"
                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +25,7 @@ template.innerHTML = `
       <ul class="snap-mandatory snap-x scrollbar-none flex gap-5 flex-1 w-full motion-safe:scroll-smooth overflow-x-auto contents-container">
         <slot></slot>
       </ul>
-      <div class="absolute right-0 self-center text-white bg-black bg-opacity-25 hover:bg-opacity-50 hidden z-10">
+      <div class="absolute right-0 self-center text-white bg-black bg-opacity-25 hover:bg-opacity-50 transparency-reduce:bg-opacity-80 transparency-reduce:hover:bg-opacity-100 hidden z-10">
         <a aria-label="Next Image" class="next-image-link z-10" href="#">
           <svg class="w-12 h-12 pointer-events-none" fill="none" stroke="currentColor"
                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +35,7 @@ template.innerHTML = `
       </div>
     </div>
   </div>
-  <div class="fixed inset-0 backdrop-brightness-50 z-5 hidden fullscreen-background"></div>
+  <div class="fixed inset-0 backdrop-brightness-50 transparency-reduce:backdrop-brightness-[0.25] z-5 hidden fullscreen-background"></div>
 </div>`;
 
 export default class HorizontalScroller extends HTMLElement {
