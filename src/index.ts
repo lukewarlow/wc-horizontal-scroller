@@ -16,7 +16,7 @@ template.innerHTML = `
 		  />
 		</svg>
       </button>
-      <button type="button" id="enter-fullscreen" class="hidden lg:block" title="Maximise Slide" aria-label="Maximise Slide">
+      <button type="button" id="enter-fullscreen" class="hidden md:block" title="Maximise Slide" aria-label="Maximise Slide">
         <svg class="w-8 h-8"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" fill="none" aria-hidden="true">
   			<path
   				fill-rule="evenodd"
@@ -80,12 +80,11 @@ export default class HorizontalScroller extends HTMLElement {
 		const exitFullscreenButton = this.#contents.querySelector('#exit-fullscreen')! as HTMLButtonElement;
 
 		background.classList.add('hidden');
-		exitFullscreenButton.parentElement!.classList.remove('sm:block');
 		exitFullscreenButton.parentElement!.parentElement!.classList.add('relative');
 		exitFullscreenButton.parentElement!.parentElement!.classList.remove('fixed', 'z-10', 'start-0', 'end-0', 'block-start-0', 'block-end-0', 'm-auto', 'max-w-[80%]', 'h-fit', 'w-fit');
 
-		enterFullscreenButton.classList.toggle('lg:block');
-		exitFullscreenButton.classList.toggle('lg:block');
+		enterFullscreenButton.classList.toggle('md:block');
+		exitFullscreenButton.classList.toggle('md:block');
 		// @ts-ignore
 		if (this.#contents!.activeElement === exitFullscreenButton)
 			enterFullscreenButton.focus();
@@ -201,12 +200,11 @@ export default class HorizontalScroller extends HTMLElement {
 		if (!noFullscreen) {
 			enterFullscreenButton.onclick = (event) => {
 				event.stopPropagation();
-				enterFullscreenButton.parentElement!.classList.add('sm:block');
 				enterFullscreenButton.parentElement!.parentElement!.classList.remove('relative');
 				enterFullscreenButton.parentElement!.parentElement!.classList.add('fixed', 'z-10', 'start-0', 'end-0', 'block-start-0', 'block-end-0', 'm-auto', 'max-w-[80%]', 'h-fit', 'w-fit');
 				background.classList.remove('hidden');
-				enterFullscreenButton.classList.toggle('lg:block');
-				exitFullscreenButton.classList.toggle('lg:block');
+				enterFullscreenButton.classList.toggle('md:block');
+				exitFullscreenButton.classList.toggle('md:block');
 				exitFullscreenButton.focus();
 
 				this.dispatchEvent(new CustomEvent('scrollerfullscreenenter', { bubbles: true, composed: true }));
@@ -215,6 +213,10 @@ export default class HorizontalScroller extends HTMLElement {
 			}
 			background.onclick = this.#exitFullscreen;
 			exitFullscreenButton.onclick = this.#exitFullscreen;
+		}
+
+		if (noFullscreen) {
+			enterFullscreenButton.classList.toggle('md:block');
 		}
 
 		document.querySelectorAll('img[data-hidden]').forEach((e: any) => {
