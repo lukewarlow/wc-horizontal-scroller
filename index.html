@@ -5,7 +5,14 @@
     <title>Title</title>
     <style>
         body {
-            background-color: rebeccapurple;
+            background-color: white;
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            body {
+                background-color: black;
+            }
         }
 
         img[data-hidden] {
@@ -24,13 +31,16 @@
         <div style="display: grid; grid-template-columns: repeat(3,minmax(0,1fr));">
             <div style="display: flex; flex-direction: column">
                 <div style="overflow: hidden; width: 100%">
-                    <horizontal-scroller id="foo">
+                    <horizontal-scroller id="foo" aria-label="Image Carousel">
                         <picture>
-                            <img width="1920" height="1080" src="/src/image.png" />
+                            <img width="1920" height="1080" src="/src/image.png" alt="Image 1" />
                         </picture>
 
                         <picture>
-                            <img data-hidden width="1920" height="1080" src="/src/image.png" style="filter: invert(1)" />
+                            <img data-hidden width="1920" height="1080" src="/src/image.png" style="filter: invert(1)"  alt="Image 2" />
+                        </picture>
+                        <picture>
+                            <img data-hidden width="1920" height="1080" src="/src/image.png"  alt="Image 3" />
                         </picture>
                     </horizontal-scroller>
                 </div>
