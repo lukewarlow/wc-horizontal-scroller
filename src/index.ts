@@ -5,7 +5,7 @@ template.innerHTML = `
 <div>
   <style>${css}</style>
   <div class="relative">
-    <div class="absolute right-0 self-center text-white bg-black bg-opacity-25 hover:bg-opacity-50 transparency-reduce:bg-opacity-80 transparency-reduce:hover:bg-opacity-100 z-10" aria-hidden="true">
+    <div class="absolute right-0 self-center text-white bg-black bg-opacity-25 hover:bg-opacity-50 transparency-reduce:bg-opacity-80 transparency-reduce:hover:bg-opacity-100 z-10">
       <button type="button" id="exit-fullscreen" class="hidden" title="Minimise Slide" aria-label="Minimise Slide">
         <svg class="w-8 h-8" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 		  <path
@@ -116,26 +116,26 @@ export default class HorizontalScroller extends HTMLElement {
 		const nextLink = this.#contents.querySelector(`.next-image-link`)! as HTMLAnchorElement;
 		const nextLinkContainer = nextLink.parentElement!;
 		if (this.#activeSlideIndex === 0) {
-			previousLinkContainer.classList.remove('sm:block');
+			previousLinkContainer.classList.remove('!block');
 			// @ts-ignore
 			if (this.#contents.activeElement == previousLink)
 				nextLink.focus();
 		}
 
 		if (this.#activeSlideIndex === this.#numberOfChildren - 1) {
-			nextLinkContainer.classList.remove('sm:block');
+			nextLinkContainer.classList.remove('!block');
 			// @ts-ignore
 			if (this.#contents.activeElement == nextLink)
 				previousLink.focus();
 		}
 
 		if (this.#activeSlideIndex > 0) {
-			previousLinkContainer.classList.add('sm:block');
+			previousLinkContainer.classList.add('!block');
 			previousLink.href = `#${this.id}-${this.#activeSlideIndex}`;
 		}
 
 		if (this.#activeSlideIndex < this.#numberOfChildren - 1) {
-			nextLinkContainer.classList.add('sm:block');
+			nextLinkContainer.classList.add('!block');
 			nextLink.href = `#${this.id}-${this.#activeSlideIndex + 2}`;
 		}
 	}
@@ -171,7 +171,7 @@ export default class HorizontalScroller extends HTMLElement {
 			}
 
 			const nextLink = this.#contents.querySelector('.next-image-link')! as HTMLAnchorElement;
-			nextLink.parentElement!.classList.add('sm:block');
+			nextLink.parentElement!.classList.add('!block');
 			nextLink.href = `#${this.id}-2`;
 
 			const scrollTo = (event: Event) => {
