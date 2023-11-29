@@ -32,7 +32,7 @@ Then you can use it in your HTML. You must provide an ID for the element.
 
 By default, clicking on the element will expand it to cover most of the viewport. This can be disabled by adding the `no-fullscreen` attribute to the custom element.
 
-A `scrollerfullscreenenter` event will be dispatched by the element when entering fullscreen, and `scrollerfullscreenexit` when exiting fullscreen. See [index.html](https://github.com/lukewarlow/navigation-api-types/blob/master/index.html) for an example usage.
+A `scrollerfullscreenenter` event will be dispatched by the element when entering fullscreen, and `scrollerfullscreenexit` when exiting fullscreen. See [index.html](https://github.com/lukewarlow/wc-horizontal-scroller/blob/master/index.html) for an example usage.
 
 ## License
 
