@@ -62,6 +62,8 @@ export default class HorizontalScroller extends HTMLElement {
 	#numberOfChildren: number = 0;
 	readonly #internals: ElementInternals;
 
+	#closeWatcher: CloseWatcher | null = null;
+
 	constructor() {
 		super();
 
@@ -74,6 +76,7 @@ export default class HorizontalScroller extends HTMLElement {
 
 	#exitFullscreen = (event: Event) => {
 		event.stopPropagation();
+		this.#closeWatcher?.destroy();
 
 		const background = this.#contents.querySelector('.fullscreen-background')! as HTMLElement;
 		const enterFullscreenButton = this.#contents.querySelector('#enter-fullscreen')! as HTMLButtonElement;
@@ -209,7 +212,16 @@ export default class HorizontalScroller extends HTMLElement {
 
 				this.dispatchEvent(new CustomEvent('scrollerfullscreenenter', { bubbles: true, composed: true }));
 
-				document.addEventListener('keydown', this.#handleKeyPress);
+				// TODO: Should probably just make a simple polyfill for CloseWatcher
+				if ('CloseWatcher' in window) {
+					this.#closeWatcher?.destroy();
+					this.#closeWatcher = new CloseWatcher();
+					this.#closeWatcher.onclose = (e: Event) => {
+						this.#exitFullscreen(e);
+					}
+				} else {
+					document.addEventListener('keydown', this.#handleKeyPress);
+				}
 			}
 			background.onclick = this.#exitFullscreen;
 			exitFullscreenButton.onclick = this.#exitFullscreen;
