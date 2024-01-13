@@ -1,6 +1,8 @@
 const h = `*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}:before,:after{--tw-content: ""}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*,:before,:after{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.end-0{inset-inline-end:0px}.right-0{right:0}.start-0{inset-inline-start:0px}.z-10{z-index:10}.m-auto{margin:auto}.\\!block{display:block!important}.block{display:block}.inline{display:inline}.flex{display:flex}.contents{display:contents}.hidden{display:none}.h-12{height:3rem}.h-8{height:2rem}.h-fit{height:-moz-fit-content;height:fit-content}.w-12{width:3rem}.w-8{width:2rem}.w-fit{width:-moz-fit-content;width:fit-content}.w-full{width:100%}.max-w-\\[80\\%\\]{max-width:80%}.flex-1{flex:1 1 0%}.snap-x{scroll-snap-type:x var(--tw-scroll-snap-strictness)}.snap-mandatory{--tw-scroll-snap-strictness: mandatory}.gap-5{gap:1.25rem}.self-center{align-self:center}.overflow-x-auto{overflow-x:auto}.bg-black{--tw-bg-opacity: 1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}.bg-opacity-25{--tw-bg-opacity: .25}.text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-brightness-50{--tw-backdrop-brightness: brightness(.5);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.scrollbar-none{scrollbar-width:none}.scrollbar-none::-webkit-scrollbar{display:none}::slotted(li){display:flex;width:100%;scroll-snap-align:start;scroll-snap-stop:always}.block-start-0{inset-block-start:0}.block-end-0{inset-block-end:0}.hover\\:bg-opacity-50:hover{--tw-bg-opacity: .5}@media (prefers-reduced-transparency: reduce){.transparency-reduce\\:bg-opacity-80{--tw-bg-opacity: .8}.transparency-reduce\\:backdrop-brightness-\\[0\\.25\\]{--tw-backdrop-brightness: brightness(.25);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transparency-reduce\\:hover\\:bg-opacity-100:hover{--tw-bg-opacity: 1}}@media (prefers-reduced-motion: no-preference){.motion-safe\\:scroll-smooth{scroll-behavior:smooth}}@media (min-width: 768px){.md\\:block{display:block}}
-`, d = document.createElement("template");
-d.innerHTML = `
+`;
+"trustedTypes" in window || (window.trustedTypes = { createPolicy: (c, t) => t });
+const p = document.createElement("template"), b = window.trustedTypes.createPolicy("wc-horizontal-scroller", { createHTML: (c) => c });
+p.innerHTML = b.createHTML(`
 <div>
   <style>${h}</style>
   <div class="relative">
@@ -53,8 +55,8 @@ d.innerHTML = `
     </div>
   </div>
   <div class="fixed inset-0 backdrop-brightness-50 transparency-reduce:backdrop-brightness-[0.25] z-5 hidden fullscreen-background"></div>
-</div>`;
-class w extends HTMLElement {
+</div>`);
+class u extends HTMLElement {
   #t;
   #e = 0;
   #r = 0;
@@ -63,7 +65,7 @@ class w extends HTMLElement {
   constructor() {
     super();
     const t = this.attachShadow({ mode: "open" });
-    this.#t = t, t.appendChild(d.content.cloneNode(!0)), this.#o = this.attachInternals();
+    this.#t = t, t.appendChild(p.content.cloneNode(!0)), this.#o = this.attachInternals();
   }
   #i = (t) => {
     t.stopPropagation(), this.#a?.destroy();
@@ -102,10 +104,10 @@ class w extends HTMLElement {
       "onscrollend" in document ? this.#t.querySelector(".contents-container").addEventListener("scrollend", this.#s) : this.#t.querySelector(".contents-container").addEventListener("scroll", this.#s, { passive: !0 });
       const e = this.#t.querySelector(".next-image-link");
       e.parentElement.classList.add("!block"), e.href = `#${this.id}-2`;
-      const s = (c) => {
-        c.stopPropagation(), c.preventDefault();
-        const p = c.target;
-        this.#l(`#${p.href.split("#")[1]}`);
+      const s = (d) => {
+        d.stopPropagation(), d.preventDefault();
+        const w = d.target;
+        this.#l(`#${w.href.split("#")[1]}`);
       };
       e.onclick = s;
       const n = this.#t.querySelector(".previous-image-link");
@@ -126,5 +128,5 @@ class w extends HTMLElement {
   }
 }
 export {
-  w as default
+  u as default
 };

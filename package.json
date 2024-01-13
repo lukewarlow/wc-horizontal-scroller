@@ -1,6 +1,6 @@
 {
   "name": "wc-horizontal-scroller",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Web component for a horizontal scroller",
   "keywords": [
     "web",
@@ -48,7 +48,7 @@
   "devDependencies": {
     "@types/node": "^18.15.11",
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
+    "postcss": "8.4.31",
     "tailwind-mq": "^0.2.0",
     "tailwind-scrollbar-utilities": "^0.2.0",
     "tailwindcss": "^3.3.2",

@@ -1,7 +1,13 @@
 import css from './style.css?inline';
 
+if (!('trustedTypes' in window)) {
+	window.trustedTypes={createPolicy:(_: string, options: TrustedTypePolicyOptions) => options};
+}
+
 const template = document.createElement('template');
-template.innerHTML = `
+const trustedTypesPolicy = window.trustedTypes!.createPolicy('wc-horizontal-scroller', { createHTML: (s: string) => s });
+
+template.innerHTML = trustedTypesPolicy.createHTML(`
 <div>
   <style>${css}</style>
   <div class="relative">
@@ -54,7 +60,7 @@ template.innerHTML = `
     </div>
   </div>
   <div class="fixed inset-0 backdrop-brightness-50 transparency-reduce:backdrop-brightness-[0.25] z-5 hidden fullscreen-background"></div>
-</div>`;
+</div>`);
 
 export default class HorizontalScroller extends HTMLElement {
 	readonly #contents: DocumentFragment;
