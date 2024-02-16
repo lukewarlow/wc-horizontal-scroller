@@ -7,9 +7,11 @@ if (!('trustedTypes' in window)) {
 const template = document.createElement('template');
 const trustedTypesPolicy = window.trustedTypes!.createPolicy('wc-horizontal-scroller', { createHTML: (s: string) => s });
 
+const styleSheet = new CSSStyleSheet();
+styleSheet.replaceSync(css);
+
 template.innerHTML = trustedTypesPolicy.createHTML(`
 <div>
-  <style>${css}</style>
   <div class="relative">
     <div class="absolute right-0 self-center text-white bg-black bg-opacity-25 hover:bg-opacity-50 transparency-reduce:bg-opacity-80 transparency-reduce:hover:bg-opacity-100 z-10">
       <button type="button" id="exit-fullscreen" class="hidden" title="Minimise Slide" aria-label="Minimise Slide">
@@ -74,6 +76,7 @@ export default class HorizontalScroller extends HTMLElement {
 		super();
 
 		const shadowRoot = this.attachShadow({ mode: 'open' });
+		shadowRoot.adoptedStyleSheets.push(styleSheet);
 
 		this.#contents = shadowRoot;
 		shadowRoot.appendChild(template.content.cloneNode(true));
