@@ -1,132 +1,342 @@
-const b = `*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}:before,:after{--tw-content: ""}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*,:before,:after{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.end-0{inset-inline-end:0px}.right-0{right:0}.start-0{inset-inline-start:0px}.z-10{z-index:10}.m-auto{margin:auto}.\\!block{display:block!important}.block{display:block}.inline{display:inline}.flex{display:flex}.contents{display:contents}.hidden{display:none}.h-12{height:3rem}.h-8{height:2rem}.h-fit{height:-moz-fit-content;height:fit-content}.w-12{width:3rem}.w-8{width:2rem}.w-fit{width:-moz-fit-content;width:fit-content}.w-full{width:100%}.max-w-\\[80\\%\\]{max-width:80%}.flex-1{flex:1 1 0%}.snap-x{scroll-snap-type:x var(--tw-scroll-snap-strictness)}.snap-mandatory{--tw-scroll-snap-strictness: mandatory}.gap-5{gap:1.25rem}.self-center{align-self:center}.overflow-x-auto{overflow-x:auto}.bg-black{--tw-bg-opacity: 1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}.bg-opacity-25{--tw-bg-opacity: .25}.text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-brightness-50{--tw-backdrop-brightness: brightness(.5);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.scrollbar-none{scrollbar-width:none}.scrollbar-none::-webkit-scrollbar{display:none}::slotted(li){display:flex;width:100%;scroll-snap-align:start;scroll-snap-stop:always}.block-start-0{inset-block-start:0}.block-end-0{inset-block-end:0}.hover\\:bg-opacity-50:hover{--tw-bg-opacity: .5}@media (prefers-reduced-transparency: reduce){.transparency-reduce\\:bg-opacity-80{--tw-bg-opacity: .8}.transparency-reduce\\:backdrop-brightness-\\[0\\.25\\]{--tw-backdrop-brightness: brightness(.25);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transparency-reduce\\:hover\\:bg-opacity-100:hover{--tw-bg-opacity: 1}}@media (prefers-reduced-motion: no-preference){.motion-safe\\:scroll-smooth{scroll-behavior:smooth}}@media (min-width: 768px){.md\\:block{display:block}}
-`;
-"trustedTypes" in window || (window.trustedTypes = { createPolicy: (c, t) => t });
-const p = document.createElement("template"), u = window.trustedTypes.createPolicy("wc-horizontal-scroller", { createHTML: (c) => c }), h = new CSSStyleSheet();
-h.replaceSync(b);
-p.innerHTML = u.createHTML(`
+(() => {
+  if (typeof HTMLButtonElement > "u" || "source" in ((globalThis.CommandEvent || {}).prototype || {}))
+    return;
+  document.addEventListener(
+    "invoke",
+    (e) => {
+      e.type == "invoke" && e.isTrusted && (e.stopImmediatePropagation(), e.preventDefault());
+    },
+    !0
+  ), document.addEventListener(
+    "command",
+    (e) => {
+      e.type == "command" && e.isTrusted && (e.stopImmediatePropagation(), e.preventDefault());
+    },
+    !0
+  );
+  function p(e, o, t = !0) {
+    Object.defineProperty(e, o, {
+      ...Object.getOwnPropertyDescriptor(e, o),
+      enumerable: t
+    });
+  }
+  function n(e) {
+    return e && typeof e.getRootNode == "function" ? e.getRootNode() : e && e.parentNode ? n(e.parentNode) : e;
+  }
+  const d = globalThis.ShadowRoot || function() {
+  }, c = /* @__PURE__ */ new WeakMap(), i = /* @__PURE__ */ new WeakMap();
+  class a extends Event {
+    constructor(o, t = {}) {
+      super(o, t);
+      const { source: r, command: l } = t;
+      if (r != null && !(r instanceof Element))
+        throw new TypeError("source must be an element");
+      c.set(this, r || null), i.set(
+        this,
+        l !== void 0 ? String(l) : ""
+      );
+    }
+    get [Symbol.toStringTag]() {
+      return "CommandEvent";
+    }
+    get source() {
+      if (!c.has(this))
+        throw new TypeError("illegal invocation");
+      const o = c.get(this);
+      if (!(o instanceof Element)) return null;
+      const t = n(o);
+      return t !== n(this.target || document) ? t.host : o;
+    }
+    get command() {
+      if (!i.has(this))
+        throw new TypeError("illegal invocation");
+      return i.get(this);
+    }
+    get action() {
+      throw new Error(
+        "CommandEvent#action was renamed to CommandEvent#command"
+      );
+    }
+    get invoker() {
+      throw new Error(
+        "CommandEvent#invoker was renamed to CommandEvent#source"
+      );
+    }
+  }
+  p(a.prototype, "source"), p(a.prototype, "command");
+  class s extends Event {
+    constructor() {
+      throw new Error(
+        "InvokeEvent has been deprecated, it has been renamed to `ComamndEvent`"
+      );
+    }
+  }
+  const u = /* @__PURE__ */ new WeakMap();
+  function f(e) {
+    Object.defineProperties(e.prototype, {
+      commandForElement: {
+        enumerable: !0,
+        configurable: !0,
+        set(o) {
+          if (this.hasAttribute("invokeaction"))
+            throw new TypeError(
+              "Element has deprecated `invokeaction` attribute, replace with `command`"
+            );
+          if (this.hasAttribute("invoketarget"))
+            throw new TypeError(
+              "Element has deprecated `invoketarget` attribute, replace with `commandfor`"
+            );
+          if (o === null)
+            this.removeAttribute("commandfor"), u.delete(this);
+          else if (o instanceof Element) {
+            this.setAttribute("commandfor", "");
+            const t = n(o);
+            n(this) === t || t === this.ownerDocument ? u.set(this, o) : u.delete(this);
+          } else
+            throw new TypeError("commandForElement must be an element or null");
+        },
+        get() {
+          if (this.localName !== "button")
+            return null;
+          if (this.hasAttribute("invokeaction") || this.hasAttribute("invoketarget"))
+            return console.warn(
+              "Element has deprecated `invoketarget` or `invokeaction` attribute, use `commandfor` and `command` instead"
+            ), null;
+          if (this.disabled)
+            return null;
+          if (this.form && this.getAttribute("type") !== "button")
+            return console.warn(
+              "Element with `commandFor` is a form participant. It should explicitly set `type=button` in order for `commandFor` to work"
+            ), null;
+          const o = u.get(this);
+          if (o)
+            return o.isConnected ? o : (u.delete(this), null);
+          const t = n(this), r = this.getAttribute("commandfor");
+          return (t instanceof Document || t instanceof d) && r && t.getElementById(r) || null;
+        }
+      },
+      command: {
+        enumerable: !0,
+        configurable: !0,
+        get() {
+          const o = this.getAttribute("command") || "";
+          return o || "";
+        },
+        set(o) {
+          this.setAttribute("command", o);
+        }
+      },
+      invokeAction: {
+        enumerable: !1,
+        configurable: !0,
+        get() {
+          throw new Error(
+            "invokeAction is deprecated. It has been renamed to command"
+          );
+        },
+        set(o) {
+          throw new Error(
+            "invokeAction is deprecated. It has been renamed to command"
+          );
+        }
+      },
+      invokeTargetElement: {
+        enumerable: !1,
+        configurable: !0,
+        get() {
+          throw new Error(
+            "invokeTargetElement is deprecated. It has been renamed to command"
+          );
+        },
+        set(o) {
+          throw new Error(
+            "invokeTargetElement is deprecated. It has been renamed to command"
+          );
+        }
+      }
+    });
+  }
+  function k(e) {
+    if (e.defaultPrevented || e.type !== "click") return;
+    e.target.closest(
+      "button[invoketarget], button[invokeaction], input[invoketarget], input[invokeaction]"
+    ) && console.warn(
+      "Elements with `invoketarget` or `invokeaction` are deprecated and should be renamed to use `commandfor` and `command` respectively"
+    );
+    const t = e.target.closest(
+      "button[commandfor], button[command], input[commandfor], input[command]"
+    );
+    if (!t) return;
+    if (this.form && this.getAttribute("type") !== "button")
+      throw e.preventDefault(), new Error(
+        "Element with `commandFor` is a form participant. It should explicitly set `type=button` in order for `commandFor` to work. In order for it to act as a Submit button, it must not have command or commandfor attributes"
+      );
+    if (t.hasAttribute("command") !== t.hasAttribute("commandfor")) {
+      const h = t.hasAttribute("command") ? "command" : "commandfor", v = t.hasAttribute("command") ? "commandfor" : "command";
+      throw new Error(
+        `Element with ${h} attribute must also have a ${v} attribute to function.`
+      );
+    }
+    if (t.command !== "show-popover" && t.command !== "hide-popover" && t.command !== "toggle-popover" && t.command !== "show-modal" && t.command !== "close" && !t.command.startsWith("--")) {
+      console.warn(
+        `"${t.command}" is not a valid command value. Custom commands must begin with --`
+      );
+      return;
+    }
+    const r = t.commandForElement, l = new a("command", {
+      command: t.command,
+      source: t
+    });
+    if (r.dispatchEvent(l), l.defaultPrevented) return;
+    const m = l.command.toLowerCase();
+    if (r.popover) {
+      const h = !r.matches(":popover-open");
+      h && (m === "toggle-popover" || m === "show-popover") ? r.showPopover() : !h && m === "hide-popover" && r.hidePopover();
+    } else if (r.localName === "dialog") {
+      const h = !r.hasAttribute("open");
+      h && m === "show-modal" ? r.showModal() : !h && m === "close" && r.close();
+    }
+  }
+  function g(e) {
+    e.addEventListener("click", k, !0);
+  }
+  function y(e, o) {
+    const t = e.prototype.attachShadow;
+    e.prototype.attachShadow = function(l) {
+      const m = t.call(this, l);
+      return o(m), m;
+    };
+    const r = e.prototype.attachInternals;
+    e.prototype.attachInternals = function() {
+      const l = r.call(this);
+      return l.shadowRoot && o(l.shadowRoot), l;
+    };
+  }
+  f(globalThis.HTMLButtonElement || function() {
+  }), y(globalThis.HTMLElement || function() {
+  }, (e) => {
+    g(e);
+  }), g(document), Object.defineProperty(window, "CommandEvent", {
+    value: a,
+    configurable: !0,
+    writable: !0
+  }), Object.defineProperty(window, "InvokeEvent", {
+    value: s,
+    configurable: !0,
+    writable: !0
+  });
+})();
+const C = "*{box-sizing:border-box}a{color:inherit;text-decoration:inherit}button{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button{text-transform:none}button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}ol,ul,menu{list-style:none;margin:0;padding:0}button{cursor:pointer}:disabled{cursor:default}svg{display:block;vertical-align:middle}[hidden]{display:none}.hidden{display:none}::slotted(li){display:flex;width:100%;scroll-snap-align:start;scroll-snap-stop:always}dialog{display:block;position:relative;width:initial;height:initial;padding:0;margin:0}dialog[open]{position:fixed;inset-inline-start:0;inset-inline-end:0;inset-block-start:0;inset-block-end:0;margin:auto;max-width:80%;height:fit-content;width:fit-content}::backdrop{--opacity: 50%;background-color:color-mix(in oklab,black var(--opacity),transparent);@media (prefers-reduced-transparency: reduce){--opacity: 75%}}#dialog-child{position:absolute;inset-inline-end:0;align-self:center;color:#fff;--opacity: 25%;background-color:color-mix(in oklab,black var(--opacity),transparent);z-index:10}#dialog-child:hover{--opacity: 50%}@media (prefers-reduced-transparency: reduce){#dialog-child{--opacity: 80%}#dialog-child:hover{--opacity: 100%}}button{display:none;svg{width:2rem;height:2rem}}@media (min-width: 768px){dialog:not([open]){#enter-fullscreen{display:block}}dialog[open]{#exit-fullscreen{display:block}}}#image-container{position:relative;display:flex}.link-container{position:absolute;align-self:center;color:#fff;--opacity: 25%;background-color:color-mix(in oklab,black var(--opacity),transparent);z-index:10;&:hover{--opacity: 50%}@media (prefers-reduced-transparency: reduce){--opacity: 80%;&:hover{--opacity: 100%}}}.link-container{display:none}#next-link-container{inset-inline-end:0}#next-link{z-index:10}a{svg{width:3rem;height:3rem;pointer-events:none}}#carousel-items{scroll-snap-type:x mandatory;scrollbar-width:none;display:flex;gap:1.25rem;flex:1;width:100%;overflow-x:auto;&::-webkit-scrollbar{display:none}@media (prefers-reduced-motion: no-preference){scroll-behavior:smooth}}.block{display:block}.\\!block{display:block!important}:host([no-fullscreen]){button{display:none!important}}";
+"trustedTypes" in window || (window.trustedTypes = { createPolicy: (p, n) => n });
+const w = document.createElement("template"), S = window.trustedTypes.createPolicy("wc-horizontal-scroller", { createHTML: (p) => p }), b = new CSSStyleSheet();
+b.replaceSync(C);
+w.innerHTML = S.createHTML(`
 <div>
-  <div class="relative">
-    <div class="absolute right-0 self-center text-white bg-black bg-opacity-25 hover:bg-opacity-50 transparency-reduce:bg-opacity-80 transparency-reduce:hover:bg-opacity-100 z-10">
-      <button type="button" id="exit-fullscreen" class="hidden" title="Minimise Slide" aria-label="Minimise Slide">
-        <svg class="w-8 h-8" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-		  <path
+<dialog id="dialog" closedby="any">
+<div id="dialog-child">
+  <button aria-expanded="true" command="close" commandfor="dialog" type="button" id="exit-fullscreen" title="Minimise Slide" aria-label="Minimise Slide">
+	<svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+	  <path
+		fill-rule="evenodd"
+		clip-rule="evenodd"
+		d="M5.5 2C5.77614 2 6 2.22386 6 2.5V5.5C6 5.77614 5.77614 6 5.5 6H2.5C2.22386 6 2 5.77614 2 5.5C2 5.22386 2.22386 5 2.5 5H5V2.5C5 2.22386 5.22386 2 5.5 2ZM9.5 2C9.77614 2 10 2.22386 10 2.5V5H12.5C12.7761 5 13 5.22386 13 5.5C13 5.77614 12.7761 6 12.5 6H9.5C9.22386 6 9 5.77614 9 5.5V2.5C9 2.22386 9.22386 2 9.5 2ZM2 9.5C2 9.22386 2.22386 9 2.5 9H5.5C5.77614 9 6 9.22386 6 9.5V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V10H2.5C2.22386 10 2 9.77614 2 9.5ZM9 9.5C9 9.22386 9.22386 9 9.5 9H12.5C12.7761 9 13 9.22386 13 9.5C13 9.77614 12.7761 10 12.5 10H10V12.5C10 12.7761 9.77614 13 9.5 13C9.22386 13 9 12.7761 9 12.5V9.5Z"
+		fill="currentcolor"
+	  />
+	</svg>
+  </button>
+  <button command="show-modal" commandfor="dialog" type="button" id="enter-fullscreen" title="Maximise Slide" aria-label="Maximise Slide">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+		<path
 			fill-rule="evenodd"
 			clip-rule="evenodd"
-			d="M5.5 2C5.77614 2 6 2.22386 6 2.5V5.5C6 5.77614 5.77614 6 5.5 6H2.5C2.22386 6 2 5.77614 2 5.5C2 5.22386 2.22386 5 2.5 5H5V2.5C5 2.22386 5.22386 2 5.5 2ZM9.5 2C9.77614 2 10 2.22386 10 2.5V5H12.5C12.7761 5 13 5.22386 13 5.5C13 5.77614 12.7761 6 12.5 6H9.5C9.22386 6 9 5.77614 9 5.5V2.5C9 2.22386 9.22386 2 9.5 2ZM2 9.5C2 9.22386 2.22386 9 2.5 9H5.5C5.77614 9 6 9.22386 6 9.5V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V10H2.5C2.22386 10 2 9.77614 2 9.5ZM9 9.5C9 9.22386 9.22386 9 9.5 9H12.5C12.7761 9 13 9.22386 13 9.5C13 9.77614 12.7761 10 12.5 10H10V12.5C10 12.7761 9.77614 13 9.5 13C9.22386 13 9 12.7761 9 12.5V9.5Z"
+			d="M2 2.5C2 2.22386 2.22386 2 2.5 2H5.5C5.77614 2 6 2.22386 6 2.5C6 2.77614 5.77614 3 5.5 3H3V5.5C3 5.77614 2.77614 6 2.5 6C2.22386 6 2 5.77614 2 5.5V2.5ZM9 2.5C9 2.22386 9.22386 2 9.5 2H12.5C12.7761 2 13 2.22386 13 2.5V5.5C13 5.77614 12.7761 6 12.5 6C12.2239 6 12 5.77614 12 5.5V3H9.5C9.22386 3 9 2.77614 9 2.5ZM2.5 9C2.77614 9 3 9.22386 3 9.5V12H5.5C5.77614 12 6 12.2239 6 12.5C6 12.7761 5.77614 13 5.5 13H2.5C2.22386 13 2 12.7761 2 12.5V9.5C2 9.22386 2.22386 9 2.5 9ZM12.5 9C12.7761 9 13 9.22386 13 9.5V12.5C13 12.7761 12.7761 13 12.5 13H9.5C9.22386 13 9 12.7761 9 12.5C9 12.2239 9.22386 12 9.5 12H12V9.5C12 9.22386 12.2239 9 12.5 9Z"
 			fill="currentcolor"
-		  />
-		</svg>
-      </button>
-      <button type="button" id="enter-fullscreen" class="hidden md:block" title="Maximise Slide" aria-label="Maximise Slide">
-        <svg class="w-8 h-8"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-  			<path
-  				fill-rule="evenodd"
-  				clip-rule="evenodd"
-  				d="M2 2.5C2 2.22386 2.22386 2 2.5 2H5.5C5.77614 2 6 2.22386 6 2.5C6 2.77614 5.77614 3 5.5 3H3V5.5C3 5.77614 2.77614 6 2.5 6C2.22386 6 2 5.77614 2 5.5V2.5ZM9 2.5C9 2.22386 9.22386 2 9.5 2H12.5C12.7761 2 13 2.22386 13 2.5V5.5C13 5.77614 12.7761 6 12.5 6C12.2239 6 12 5.77614 12 5.5V3H9.5C9.22386 3 9 2.77614 9 2.5ZM2.5 9C2.77614 9 3 9.22386 3 9.5V12H5.5C5.77614 12 6 12.2239 6 12.5C6 12.7761 5.77614 13 5.5 13H2.5C2.22386 13 2 12.7761 2 12.5V9.5C2 9.22386 2.22386 9 2.5 9ZM12.5 9C12.7761 9 13 9.22386 13 9.5V12.5C13 12.7761 12.7761 13 12.5 13H9.5C9.22386 13 9 12.7761 9 12.5C9 12.2239 9.22386 12 9.5 12H12V9.5C12 9.22386 12.2239 9 12.5 9Z"
-  				fill="currentcolor"
-			/>
-		</svg>
-      </button>
-    </div>
-    <div class="relative flex">
-      <div class="absolute self-center text-white bg-black bg-opacity-25 hover:bg-opacity-50 transparency-reduce:bg-opacity-80 transparency-reduce:hover:bg-opacity-100 hidden z-10">
-        <a href="#" aria-label="Previous Slide" class="previous-image-link" aria-controls="carousel-items">
-          <svg class="w-12 h-12 pointer-events-none" fill="none" stroke="currentColor"
-               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-          </svg>
-        </a>
-      </div>
-      <div class="absolute right-0 self-center text-white bg-black bg-opacity-25 hover:bg-opacity-50 transparency-reduce:bg-opacity-80 transparency-reduce:hover:bg-opacity-100 hidden z-10">
-        <a href="#" aria-label="Next Slide" class="next-image-link z-10" aria-controls="carousel-items">
-          <svg class="w-12 h-12 pointer-events-none" fill="none" stroke="currentColor"
-               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-          </svg>
-        </a>
-      </div>
-      <ul
-		class="snap-mandatory snap-x scrollbar-none flex gap-5 flex-1 w-full motion-safe:scroll-smooth overflow-x-auto contents-container"
-		id="carousel-items"
-		aria-label="Carousel Items"
-	  >
-        <slot></slot>
-      </ul>
-    </div>
+		/>
+	</svg>
+  </button>
+</div>
+<div id="image-container">
+  <div id="previous-link-container" class="link-container">
+	<a id="previous-link" href="#" aria-label="Previous Slide" aria-controls="carousel-items">
+	  <svg fill="none" stroke="currentColor"
+		   viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+	  </svg>
+	</a>
   </div>
-  <div class="fixed inset-0 backdrop-brightness-50 transparency-reduce:backdrop-brightness-[0.25] z-5 hidden fullscreen-background"></div>
+  <div id="next-link-container" class="link-container">
+	<a id="next-link" href="#" aria-label="Next Slide" aria-controls="carousel-items">
+	  <svg fill="none" stroke="currentColor"
+		   viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+	  </svg>
+	</a>
+  </div>
+  <ul
+	class="contents-container"
+	id="carousel-items"
+	aria-label="Carousel Items"
+  >
+	<slot></slot>
+  </ul>
+</div>
+</dialog>
 </div>`);
-class g extends HTMLElement {
-  #t;
-  #e = 0;
-  #r = 0;
+class x extends HTMLElement {
+  #e;
+  #t = 0;
+  #n = 0;
   #o;
-  #a = null;
   constructor() {
     super();
-    const t = this.attachShadow({ mode: "open" });
-    t.adoptedStyleSheets.push(h), this.#t = t, t.appendChild(p.content.cloneNode(!0)), this.#o = this.attachInternals();
+    const n = this.attachShadow({ mode: "open" });
+    n.adoptedStyleSheets.push(b), this.#e = n, n.appendChild(w.content.cloneNode(!0)), this.#o = this.attachInternals();
   }
-  #i = (t) => {
-    t.stopPropagation(), this.#a?.destroy();
-    const a = this.#t.querySelector(".fullscreen-background"), o = this.#t.querySelector("#enter-fullscreen"), r = this.#t.querySelector("#exit-fullscreen");
-    a.classList.add("hidden"), r.parentElement.parentElement.classList.add("relative"), r.parentElement.parentElement.classList.remove("fixed", "z-10", "start-0", "end-0", "block-start-0", "block-end-0", "m-auto", "max-w-[80%]", "h-fit", "w-fit"), o.classList.toggle("md:block"), r.classList.toggle("md:block"), this.#t.activeElement === r && o.focus(), this.dispatchEvent(new CustomEvent("scrollerfullscreenexit", { bubbles: !0, composed: !0 }));
+  #r = (n) => {
+    this.#o.states.delete(n.oldState), this.#o.states.add(n.newState);
   };
-  #l = (t) => {
-    const a = this.querySelector(t);
-    if (!a)
-      return;
-    const o = window.matchMedia("(prefers-reduced-motion: reduce").matches ? "auto" : "smooth";
-    a.scrollIntoView({ behavior: o, block: "nearest" });
+  #a = (n) => {
+    const d = this.querySelector(n);
+    if (!d) return;
+    const c = window.matchMedia("(prefers-reduced-motion: reduce").matches ? "auto" : "smooth";
+    d.scrollIntoView({ behavior: c, block: "nearest" });
   };
-  #n = (t) => {
-    switch (t.key) {
-      case "Escape":
-        this.#i(t);
-        break;
-    }
-  };
-  #s = (t) => {
-    const a = t.target;
-    this.#e = Math.round(a.scrollLeft / a.scrollWidth * this.#r);
-    const o = this.#t.querySelector(".previous-image-link"), r = o.parentElement, i = this.#t.querySelector(".next-image-link"), l = i.parentElement;
-    this.#e === 0 && (r.classList.remove("!block"), this.#t.activeElement == o && i.focus()), this.#e === this.#r - 1 && (l.classList.remove("!block"), this.#t.activeElement == i && o.focus()), this.#e > 0 && (r.classList.add("!block"), o.href = `#${this.id}-${this.#e}`), this.#e < this.#r - 1 && (l.classList.add("!block"), i.href = `#${this.id}-${this.#e + 2}`);
+  #i = (n) => {
+    const d = n.target;
+    this.#t = Math.round(d.scrollLeft / d.scrollWidth * this.#n);
+    const c = this.#e.querySelector("#previous-link"), i = c.parentElement, a = this.#e.querySelector("#next-link"), s = a.parentElement;
+    this.#t === 0 && (i.classList.remove("!block"), this.#e.activeElement == c && a.focus()), this.#t === this.#n - 1 && (s.classList.remove("!block"), this.#e.activeElement == a && c.focus()), this.#t > 0 && (i.classList.add("!block"), c.href = `#${this.id}-${this.#t}`), this.#t < this.#n - 1 && (s.classList.add("!block"), a.href = `#${this.id}-${this.#t + 2}`);
   };
   connectedCallback() {
-    this.#o.role = "region", this.#o.ariaRoleDescription = "carousel", this.#o.ariaLabel = "Carousel", this.#t.firstElementChild.classList.add("group", "block");
-    const t = Array.from(this.children).filter((e) => getComputedStyle(e).display !== "none");
-    t.forEach((e, s) => {
-      const n = document.createElement("li");
-      e.parentNode.insertBefore(n, e), n.appendChild(e), n.id = `${this.id}-${s + 1}`, n.ariaRoleDescription = "slide", n.ariaLabel = `${s + 1} of ${t.length}`, e.style.width = "100vw";
-    }), this.#r = t.length;
-    const a = this.#t.querySelector(".contents-container");
-    if (this.#r > 1) {
-      "onscrollend" in document ? this.#t.querySelector(".contents-container").addEventListener("scrollend", this.#s) : this.#t.querySelector(".contents-container").addEventListener("scroll", this.#s, { passive: !0 });
-      const e = this.#t.querySelector(".next-image-link");
-      e.parentElement.classList.add("!block"), e.href = `#${this.id}-2`;
-      const s = (d) => {
-        d.stopPropagation(), d.preventDefault();
-        const w = d.target;
-        this.#l(`#${w.href.split("#")[1]}`);
+    this.#o.role = "region", this.#o.ariaRoleDescription = "carousel", this.#o.ariaLabel = "Carousel", this.#e.firstElementChild.classList.add("block");
+    const n = Array.from(this.children).filter((i) => getComputedStyle(i).display !== "none");
+    n.forEach((i, a) => {
+      const s = document.createElement("li");
+      i.parentNode.insertBefore(s, i), s.appendChild(i), s.id = `${this.id}-${a + 1}`, s.ariaRoleDescription = "slide", s.ariaLabel = `${a + 1} of ${n.length}`, i.style.width = "100vw";
+    }), this.#n = n.length;
+    const d = this.#e.querySelector("#carousel-items");
+    if (this.#n > 1) {
+      "onscrollend" in document ? this.#e.querySelector("#carousel-items").addEventListener("scrollend", this.#i) : this.#e.querySelector("#carousel-items").addEventListener("scroll", this.#i, { passive: !0 });
+      const i = this.#e.querySelector("#next-link");
+      i.parentElement.classList.add("!block"), i.href = `#${this.id}-2`;
+      const a = (u) => {
+        u.stopPropagation(), u.preventDefault();
+        const f = u.target;
+        this.#a(`#${f.href.split("#")[1]}`);
       };
-      e.onclick = s;
-      const n = this.#t.querySelector(".previous-image-link");
-      n.onclick = s;
+      i.onclick = a;
+      const s = this.#e.querySelector("#previous-link");
+      s.onclick = a;
     } else
-      a.classList.toggle("overflow-x-auto");
-    const o = this.#t.querySelector(".fullscreen-background"), r = this.#t.querySelector("#enter-fullscreen"), i = this.#t.querySelector("#exit-fullscreen"), l = this.hasAttribute("no-fullscreen") || this.getAttribute("no-fullscreen") === "true";
-    l || (r.onclick = (e) => {
-      e.stopPropagation(), r.parentElement.parentElement.classList.remove("relative"), r.parentElement.parentElement.classList.add("fixed", "z-10", "start-0", "end-0", "block-start-0", "block-end-0", "m-auto", "max-w-[80%]", "h-fit", "w-fit"), o.classList.remove("hidden"), r.classList.toggle("md:block"), i.classList.toggle("md:block"), i.focus(), this.dispatchEvent(new CustomEvent("scrollerfullscreenenter", { bubbles: !0, composed: !0 })), "CloseWatcher" in window ? (this.#a?.destroy(), this.#a = new CloseWatcher(), this.#a.onclose = (s) => {
-        this.#i(s);
-      }) : document.addEventListener("keydown", this.#n);
-    }, o.onclick = this.#i, i.onclick = this.#i), l && r.classList.toggle("md:block"), document.querySelectorAll("img[data-hidden]").forEach((e) => {
-      e.style.display = "block";
+      d.style.overflowX = "visible";
+    this.#e.querySelector("dialog").addEventListener("toggle", this.#r), document.querySelectorAll("img[data-hidden]").forEach((i) => {
+      i.style.display = "block";
     });
   }
   disconnectedCallback() {
-    document.removeEventListener("keydown", this.#n), this.#t.querySelector(".contents-container").removeEventListener("scroll", this.#s), this.#t.querySelector(".contents-container").removeEventListener("scrollend", this.#s);
+    this.#e.querySelector("dialog").removeEventListener("toggle", this.#r), this.#e.querySelector("#carousel-items").removeEventListener("scroll", this.#i), this.#e.querySelector("#carousel-items").removeEventListener("scrollend", this.#i);
   }
 }
 export {
-  g as default
+  x as default
 };

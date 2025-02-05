@@ -1,3 +1,4 @@
+import "invokers-polyfill";
 export default class HorizontalScroller extends HTMLElement {
     #private;
     constructor();

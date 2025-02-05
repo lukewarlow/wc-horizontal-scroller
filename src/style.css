@@ -1,6 +1,73 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit
+}
+
+button {
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0
+}
+
+button {
+    text-transform: none
+}
+
+button {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none
+}
+
+:-moz-focusring {
+    outline: auto
+}
+
+ol,
+ul,
+menu {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+button {
+    cursor: pointer
+}
+
+:disabled {
+    cursor: default
+}
+
+svg {
+    display: block;
+    vertical-align: middle
+}
+
+
+[hidden] {
+    display: none
+}
+
+.\!block {
+    display: block !important
+}
+
+.block {
+    display: block
+}
+
+.hidden {
+    display: none
+}
 
 ::slotted(li) {
     display: flex;
@@ -9,10 +76,157 @@
     scroll-snap-stop: always;
 }
 
-.block-start-0 {
-    inset-block-start: 0;
+dialog {
+    display: block;
+    position: relative;
+    width: initial;
+    height: initial;
+    padding: 0;
+    margin: 0;
 }
 
-.block-end-0 {
+dialog[open] {
+    position: fixed;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-start: 0;
     inset-block-end: 0;
+    margin: auto;
+    max-width: 80%;
+    height: fit-content;
+    width: fit-content;
+}
+
+::backdrop {
+    --opacity: 50%;
+    background-color: color-mix(in oklab, black var(--opacity), transparent);
+
+    @media (prefers-reduced-transparency: reduce) {
+        --opacity: 75%;
+    }
+}
+
+#dialog-child {
+    position: absolute;
+    inset-inline-end: 0;
+    align-self: center;
+    color: white;
+    --opacity: 25%;
+    background-color: color-mix(in oklab, black var(--opacity), transparent);
+    z-index: 10;
+}
+
+#dialog-child:hover {
+    --opacity: 50%;
+}
+
+@media (prefers-reduced-transparency: reduce) {
+    #dialog-child {
+        --opacity: 80%;
+    }
+
+    #dialog-child:hover {
+        --opacity: 100%;
+    }
+}
+
+button {
+    display: none;
+    svg {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+/* md: */
+@media (min-width: 768px) {
+    dialog:not([open]) {
+        #enter-fullscreen {
+            display: block;
+        }
+    }
+
+    dialog[open] {
+        #exit-fullscreen {
+            display: block;
+        }
+    }
+}
+
+#image-container {
+    position: relative;
+    display: flex;
+}
+
+.link-container {
+    position: absolute;
+    align-self: center;
+    color: white;
+    --opacity: 25%;
+    background-color: color-mix(in oklab, black var(--opacity), transparent);
+    z-index: 10;
+
+    &:hover {
+        --opacity: 50%;
+    }
+
+    @media (prefers-reduced-transparency: reduce) {
+        --opacity: 80%;
+
+        &:hover {
+            --opacity: 100%;
+        }
+    }
+}
+
+.link-container {
+    display: none;
+}
+
+#next-link-container {
+    inset-inline-end: 0;
+}
+
+#next-link {
+    z-index: 10;
+}
+
+a {
+    svg {
+        width: 3rem;
+        height: 3rem;
+        pointer-events: none;
+    }
+}
+
+#carousel-items {
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    display: flex;
+    gap: 1.25rem;
+    flex: 1;
+    width: 100%;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        scroll-behavior: smooth;
+    }
+}
+
+.block {
+    display: block;
+}
+
+.\!block {
+    display: block !important;
+}
+
+:host([no-fullscreen]) {
+    button {
+        display: none !important;
+    }
 }
